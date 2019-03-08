@@ -20,6 +20,7 @@
 		A673BDBD22314D1F0086EAB3 /* WSLScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = A673BB8522314D1E0086EAB3 /* WSLScanView.m */; };
 		A673BDF322314E200086EAB3 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A673BDF122314E200086EAB3 /* QRCodeViewController.m */; };
 		A673BDF422314E200086EAB3 /* QRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A673BDF222314E200086EAB3 /* QRCodeViewController.xib */; };
+		A673BDF82231FDB00086EAB3 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = A673BDF72231FDB00086EAB3 /* UIView+Toast.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		A673BDF022314E200086EAB3 /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
 		A673BDF122314E200086EAB3 /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
 		A673BDF222314E200086EAB3 /* QRCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRCodeViewController.xib; sourceTree = "<group>"; };
+		A673BDF62231FDB00086EAB3 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		A673BDF72231FDB00086EAB3 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,7 @@
 		A673B64822314D1D0086EAB3 /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				A673BDF52231FDB00086EAB3 /* Toast */,
 				A673BB7E22314D1E0086EAB3 /* WSLQRScanTool */,
 			);
 			path = 3rd;
@@ -130,6 +134,15 @@
 				A673BDF222314E200086EAB3 /* QRCodeViewController.xib */,
 			);
 			path = QRCodeViewController;
+			sourceTree = "<group>";
+		};
+		A673BDF52231FDB00086EAB3 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				A673BDF62231FDB00086EAB3 /* UIView+Toast.h */,
+				A673BDF72231FDB00086EAB3 /* UIView+Toast.m */,
+			);
+			path = Toast;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +243,7 @@
 				A673B63622314C0D0086EAB3 /* ViewController.m in Sources */,
 				A673B64122314C0E0086EAB3 /* main.m in Sources */,
 				A673B63322314C0D0086EAB3 /* AppDelegate.m in Sources */,
+				A673BDF82231FDB00086EAB3 /* UIView+Toast.m in Sources */,
 				A673BDBC22314D1F0086EAB3 /* WSLNativeScanTool.m in Sources */,
 				A673BDF322314E200086EAB3 /* QRCodeViewController.m in Sources */,
 			);
@@ -261,6 +275,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -320,6 +335,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
