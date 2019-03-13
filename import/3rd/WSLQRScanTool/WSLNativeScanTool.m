@@ -82,7 +82,8 @@
 }
 
 
-- (void)scanImageQRCode:(UIImage *)imageCode {
+- (BOOL)scanImageQRCode:(UIImage *)imageCode {
+    BOOL result = NO;
     CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeQRCode
                                               context:nil
                                               options:@{CIDetectorAccuracy: CIDetectorAccuracyHigh}];
@@ -92,9 +93,12 @@
         if (self.scanFinishedBlock != nil) {
             self.scanFinishedBlock(feature.messageString);
         }
+        result = YES;
     } else {
         NSLog(@"无法识别图中二维码");
     }
+    
+    return result;
 }
 
 + (UIImage *)createQRCodeImageWithString:(nonnull NSString *)codeString

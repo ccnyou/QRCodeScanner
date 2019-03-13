@@ -59,7 +59,7 @@ typedef void(^WSLMonitorLightBlock)( float brightness);
 /**
  识别图中二维码
  */
-- (void)scanImageQRCode:(UIImage *_Nullable)imageCode;
+- (BOOL)scanImageQRCode:(UIImage *_Nullable)imageCode;
 
 /**
  生成自定义样式二维码

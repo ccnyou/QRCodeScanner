@@ -10,6 +10,7 @@
 #import "WSLNativeScanTool.h"
 #import "WSLScanView.h"
 #import "QRCodeViewController.h"
+#import "UIView+Toast.h"
 
 @interface ViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic, strong) WSLNativeScanTool *scanTool;
@@ -37,7 +38,7 @@
 }
 
 - (void)_initAppearance {
-    self.title = _T("扫描中...");
+    self.title = _T("扫描");
     self.view.backgroundColor = [UIColor blackColor];
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:_T("相册")
                                                                     style:UIBarButtonItemStylePlain
@@ -129,8 +130,12 @@
         }
 
         UIImage *image = [info objectForKey:key];
-        [self.scanTool scanImageQRCode:image];
         [picker dismissViewControllerAnimated:YES completion:nil];
+        
+        BOOL result = [self.scanTool scanImageQRCode:image];
+        if (!result) {
+            [self.view makeToast:@"无法识别图中二维码"];
+        }
     }
 }
 
