@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A662E9442239009200D01832 /* select_pic_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A662E9432239009200D01832 /* select_pic_normal@2x.png */; };
+		A662E948223903BC00D01832 /* BuildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A662E947223903BC00D01832 /* BuildViewController.m */; };
+		A662E9562239051C00D01832 /* SystemCodeZipper.m in Sources */ = {isa = PBXBuildFile; fileRef = A662E9552239051B00D01832 /* SystemCodeZipper.m */; };
 		A673B63322314C0D0086EAB3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A673B63222314C0D0086EAB3 /* AppDelegate.m */; };
 		A673B63622314C0D0086EAB3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A673B63522314C0D0086EAB3 /* ViewController.m */; };
 		A673B63922314C0D0086EAB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A673B63722314C0D0086EAB3 /* Main.storyboard */; };
@@ -24,6 +27,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A662E9432239009200D01832 /* select_pic_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "select_pic_normal@2x.png"; sourceTree = "<group>"; };
+		A662E946223903BC00D01832 /* BuildViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuildViewController.h; sourceTree = "<group>"; };
+		A662E947223903BC00D01832 /* BuildViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuildViewController.m; sourceTree = "<group>"; };
+		A662E9542239051B00D01832 /* SystemCodeZipper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemCodeZipper.h; sourceTree = "<group>"; };
+		A662E9552239051B00D01832 /* SystemCodeZipper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemCodeZipper.m; sourceTree = "<group>"; };
 		A673B62E22314C0D0086EAB3 /* QRCodeScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRCodeScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A673B63122314C0D0086EAB3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A673B63222314C0D0086EAB3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -59,6 +67,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A662E9452239009500D01832 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				A662E9432239009200D01832 /* select_pic_normal@2x.png */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		A662E949223904CE00D01832 /* publish */ = {
+			isa = PBXGroup;
+			children = (
+				A662E9532239051B00D01832 /* SystemCodeZipper */,
+			);
+			path = publish;
+			sourceTree = "<group>";
+		};
+		A662E9532239051B00D01832 /* SystemCodeZipper */ = {
+			isa = PBXGroup;
+			children = (
+				A662E9542239051B00D01832 /* SystemCodeZipper.h */,
+				A662E9552239051B00D01832 /* SystemCodeZipper.m */,
+			);
+			path = SystemCodeZipper;
+			sourceTree = "<group>";
+		};
 		A673B62522314C0D0086EAB3 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +112,7 @@
 		A673B63022314C0D0086EAB3 /* QRCodeScanner */ = {
 			isa = PBXGroup;
 			children = (
+				A662E9452239009500D01832 /* res */,
 				A673BDEF22314E200086EAB3 /* QRCodeViewController */,
 				A673B63122314C0D0086EAB3 /* AppDelegate.h */,
 				A673B63222314C0D0086EAB3 /* AppDelegate.m */,
@@ -89,6 +123,8 @@
 				A673B63C22314C0E0086EAB3 /* LaunchScreen.storyboard */,
 				A673B63F22314C0E0086EAB3 /* Info.plist */,
 				A673B64022314C0E0086EAB3 /* main.m */,
+				A662E946223903BC00D01832 /* BuildViewController.h */,
+				A662E947223903BC00D01832 /* BuildViewController.m */,
 			);
 			name = QRCodeScanner;
 			path = ../src/QRCodeScanner;
@@ -97,6 +133,7 @@
 		A673B64722314D1D0086EAB3 /* import */ = {
 			isa = PBXGroup;
 			children = (
+				A662E949223904CE00D01832 /* publish */,
 				A673B64822314D1D0086EAB3 /* 3rd */,
 			);
 			name = import;
@@ -222,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A662E9442239009200D01832 /* select_pic_normal@2x.png in Resources */,
 				A673BDBB22314D1F0086EAB3 /* scanLine@2x.png in Resources */,
 				A673BDB922314D1F0086EAB3 /* scanFlashlight@2x.png in Resources */,
 				A673BDF422314E200086EAB3 /* QRCodeViewController.xib in Resources */,
@@ -246,6 +284,8 @@
 				A673BDF82231FDB00086EAB3 /* UIView+Toast.m in Sources */,
 				A673BDBC22314D1F0086EAB3 /* WSLNativeScanTool.m in Sources */,
 				A673BDF322314E200086EAB3 /* QRCodeViewController.m in Sources */,
+				A662E948223903BC00D01832 /* BuildViewController.m in Sources */,
+				A662E9562239051C00D01832 /* SystemCodeZipper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

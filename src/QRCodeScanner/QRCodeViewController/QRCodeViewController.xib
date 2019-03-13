@@ -35,29 +35,46 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Onq-ma-oUy">
-                    <rect key="frame" x="16" y="612" width="343" height="35"/>
-                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="16" y="612" width="166.5" height="35"/>
+                    <color key="backgroundColor" red="0.30588235289999999" green="0.80784313730000001" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="35" id="Ayq-Zm-Mir"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <state key="normal" title="复制到剪贴板">
+                    <state key="normal" title="复制">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
                         <action selector="onCopyTouched:" destination="-1" eventType="touchUpInside" id="kAE-dX-5yg"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXJ-DR-FjT">
+                    <rect key="frame" x="192.5" y="612" width="166.5" height="35"/>
+                    <color key="backgroundColor" red="0.30588235289999999" green="0.80784313730000001" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="Ghl-uO-UHn"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="分享">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="onShareTouched:" destination="-1" eventType="touchUpInside" id="ZOQ-bq-bcf"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="2QC-zT-Tmk" secondAttribute="trailing" constant="16" id="3Nc-tO-JzW"/>
-                <constraint firstItem="Onq-ma-oUy" firstAttribute="trailing" secondItem="2QC-zT-Tmk" secondAttribute="trailing" id="J9m-iZ-eq0"/>
+                <constraint firstItem="tXJ-DR-FjT" firstAttribute="top" secondItem="Onq-ma-oUy" secondAttribute="top" id="6ma-ST-eiv"/>
                 <constraint firstItem="2QC-zT-Tmk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="KAd-eL-k5N"/>
+                <constraint firstItem="Onq-ma-oUy" firstAttribute="width" secondItem="tXJ-DR-FjT" secondAttribute="width" id="Nqe-8D-oVZ"/>
                 <constraint firstItem="Onq-ma-oUy" firstAttribute="leading" secondItem="2QC-zT-Tmk" secondAttribute="leading" id="bCD-Dx-OzQ"/>
+                <constraint firstItem="tXJ-DR-FjT" firstAttribute="leading" secondItem="Onq-ma-oUy" secondAttribute="trailing" constant="10" id="gCr-Np-8U2"/>
                 <constraint firstAttribute="bottom" secondItem="Onq-ma-oUy" secondAttribute="bottom" constant="20" id="kNd-wi-Iop"/>
                 <constraint firstItem="AR1-OD-CnU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="l4b-U2-X3b"/>
                 <constraint firstItem="AR1-OD-CnU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="90" id="nTm-LR-Dnn"/>
+                <constraint firstItem="tXJ-DR-FjT" firstAttribute="trailing" secondItem="2QC-zT-Tmk" secondAttribute="trailing" id="o0F-E9-9XU"/>
                 <constraint firstItem="Onq-ma-oUy" firstAttribute="top" secondItem="2QC-zT-Tmk" secondAttribute="bottom" constant="20" id="oad-rx-8Xn"/>
                 <constraint firstItem="2QC-zT-Tmk" firstAttribute="top" secondItem="AR1-OD-CnU" secondAttribute="bottom" constant="35" id="zhp-gB-Rb7"/>
             </constraints>

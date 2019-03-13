@@ -50,4 +50,36 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.code]];
 }
 
+- (IBAction)onShareTouched:(id)sender {
+    [self _shareWithSystem:self.code];
+}
+
+- (void)_shareWithSystem:(NSString *)code {
+    if (!code) {
+        return;
+    }
+    
+    NSArray *items = @[code];
+    UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:items
+                                                                             applicationActivities:nil];
+    NSArray *excludedActivityTypes =  @[UIActivityTypeAirDrop,
+                                        UIActivityTypeCopyToPasteboard,
+                                        UIActivityTypeAssignToContact,
+                                        UIActivityTypePrint,
+                                        UIActivityTypeMail,
+                                        UIActivityTypePostToTencentWeibo,
+                                        UIActivityTypeSaveToCameraRoll,
+                                        UIActivityTypeMessage,
+                                        UIActivityTypePostToTwitter];
+    controller.excludedActivityTypes = excludedActivityTypes;
+    
+    UIPopoverPresentationController *popover = controller.popoverPresentationController;
+    if (popover) {
+        popover.permittedArrowDirections = UIPopoverArrowDirectionUp;
+    }
+    
+    UIViewController *rootController = self;
+    [rootController presentViewController:controller animated:YES completion:nil];
+}
+
 @end
