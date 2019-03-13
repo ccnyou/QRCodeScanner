@@ -143,8 +143,8 @@
 
     //中心添加图片
     if (centerImage != nil) {
-
-        UIGraphicsBeginImageContext(colorCodeImage.size);
+        UIScreen *screen = [UIScreen mainScreen];
+        UIGraphicsBeginImageContextWithOptions(colorCodeImage.size, NO, screen.scale);
 
         [colorCodeImage drawInRect:CGRectMake(0, 0, colorCodeImage.size.width, colorCodeImage.size.height)];
 

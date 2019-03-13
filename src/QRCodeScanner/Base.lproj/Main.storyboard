@@ -13,7 +13,7 @@
         <scene sceneID="R4S-yx-Fr8">
             <objects>
                 <navigationController id="ziA-uo-Yvf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Cde-so-UZY"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="scan_code.png" selectedImage="scan_code_hl.png" id="Cde-so-UZY"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wHH-g7-tIw">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -45,11 +45,11 @@
             </objects>
             <point key="canvasLocation" x="340" y="134"/>
         </scene>
-        <!--Item-->
+        <!--创建-->
         <scene sceneID="ZHP-kQ-oOA">
             <objects>
                 <navigationController id="9xG-Vh-C8W" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="lAw-WK-Lac"/>
+                    <tabBarItem key="tabBarItem" title="创建" image="create_code.png" selectedImage="create_code_hl.png" id="lAw-WK-Lac"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="97Z-VA-jDK">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -80,10 +80,10 @@
             </objects>
             <point key="canvasLocation" x="-1425" y="466"/>
         </scene>
-        <!--生成-->
+        <!--创建-->
         <scene sceneID="gw9-vR-3ae">
             <objects>
-                <viewController title="生成" id="d2k-Hm-0ev" customClass="BuildViewController" sceneMemberID="viewController">
+                <viewController title="创建" id="d2k-Hm-0ev" customClass="BuildViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="i9S-P1-RDk"/>
                         <viewControllerLayoutGuide type="bottom" id="C9V-Pa-WN0"/>
@@ -120,6 +120,9 @@
                                     <constraint firstAttribute="width" secondItem="vBF-lP-twm" secondAttribute="height" id="u1d-ab-hsw"/>
                                 </constraints>
                                 <state key="normal" image="select_pic_normal.png"/>
+                                <connections>
+                                    <action selector="onSelectTouched:" destination="d2k-Hm-0ev" eventType="touchUpInside" id="tnM-59-FP9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OO0-Nn-GXg">
                                 <rect key="frame" x="16" y="565" width="166.5" height="45"/>
@@ -178,7 +181,7 @@
                             <constraint firstItem="OO0-Nn-GXg" firstAttribute="top" secondItem="QbZ-MV-BWV" secondAttribute="bottom" constant="20" id="vDr-CD-Dxq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ijv-9c-2fp"/>
+                    <navigationItem key="navigationItem" title="创建二维码" id="ijv-9c-2fp"/>
                     <connections>
                         <outlet property="buildButton" destination="OO0-Nn-GXg" id="fZs-Kw-PHR"/>
                         <outlet property="resultImageView" destination="QbZ-MV-BWV" id="YBJ-oC-6f3"/>
@@ -193,6 +196,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="create_code.png" width="25" height="25"/>
+        <image name="create_code_hl.png" width="25" height="25"/>
+        <image name="scan_code.png" width="25" height="25"/>
+        <image name="scan_code_hl.png" width="25" height="25"/>
         <image name="select_pic_normal.png" width="42" height="42"/>
     </resources>
 </document>

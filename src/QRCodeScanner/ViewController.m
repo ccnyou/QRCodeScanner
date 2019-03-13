@@ -107,6 +107,7 @@
 
     QRCodeViewController *controller = [[QRCodeViewController alloc] init];
     controller.code = scanString;
+    controller.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:controller animated:YES];
 }
 
